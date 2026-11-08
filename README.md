@@ -29,3 +29,4 @@ So I built this to put everything in one place: the timer and the video, side by
 ##preview 
 
 <img width="1353" height="721" alt="Image" src="https://github.com/user-attachments/assets/4156ecf2-0135-4d17-9e2f-deec640b4ec4" />
+<img width="1353" height="721" alt="Image" src="https://github.com/user-attachments/assets/076bf7bb-2393-4382-8274-0de70fce1ee0" />
