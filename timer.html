@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>30s Loop Timer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>30s Loop</h1>
+
+  <div class="card">
+    <div class="ring">
+      <svg viewBox="0 0 220 220">
+        <circle class="track" cx="110" cy="110" r="100"></circle>
+        <circle class="bar" id="bar" cx="110" cy="110" r="100"></circle>
+      </svg>
+      <div class="time" id="time">30</div>
+    </div>
+    <div class="meta">Round <span id="round">1</span></div>
+    <div class="row">
+      <button class="primary" id="toggle">Start</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <video id="video" loop muted playsinline></video>
+    <div class="row">
+      <label class="file">Choose video<input type="file" id="file" accept="video/*"></label>
+    </div>
+    <p class="hint">Pick a workout or face massage video from your device. It plays while the timer runs and pauses when you pause.</p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

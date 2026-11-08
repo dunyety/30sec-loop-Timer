@@ -1,0 +1,161 @@
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #fff;
+  }
+
+  body {
+    background: linear-gradient(135deg, #ff6a88, #8e2de2, #4a00e0, #00c6ff);
+    background-size: 300% 300%;
+    animation: shift 14s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 28px 16px;
+    min-height: 100vh;
+  }
+
+  @keyframes shift {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    opacity: .85;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, .14);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 28px;
+    padding: 24px;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .ring {
+    position: relative;
+    width: 240px;
+    height: 240px;
+  }
+
+  .ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .ring circle {
+    fill: none;
+    stroke-width: 12;
+    stroke-linecap: round;
+  }
+
+  .track {
+    stroke: rgba(255, 255, 255, .25);
+  }
+
+  .bar {
+    stroke: #fff;
+    stroke-dasharray: 628.3;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset .2s linear;
+  }
+
+  .time {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .meta {
+    font-size: .9rem;
+    opacity: .85;
+    margin-top: -8px;
+  }
+
+  .row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  button,
+  .file {
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .22);
+    color: #fff;
+    transition: transform .15s, background .15s;
+  }
+
+  button:hover,
+  .file:hover {
+    background: rgba(255, 255, 255, .35);
+    transform: translateY(-1px);
+  }
+
+  button.primary {
+    background: #fff;
+    color: #5b1fd1;
+  }
+
+  .file input {
+    display: none;
+  }
+
+  video {
+    width: 100%;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, .35);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  .hint {
+    font-size: .8rem;
+    opacity: .8;
+    text-align: center;
+    margin: 0;
+  }
